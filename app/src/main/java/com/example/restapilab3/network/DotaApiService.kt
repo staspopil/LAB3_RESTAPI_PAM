@@ -23,6 +23,10 @@ interface DotaApiService {
     @GET("heroes")
     fun getHeroes():
             Call<List<Hero>>
+
+    @GET("heroStats")
+    fun getHeroesStats():
+            Call<List<HeroStats>>
 }
 
     object DotaApi {
