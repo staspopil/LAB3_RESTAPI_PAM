@@ -23,5 +23,34 @@ data class HeroStats(
     val name: String,
     val pro_ban: Int,
     val pro_pick: Int,
-    val pro_win: Int
-)
+    val pro_win: Int,
+    //Chatacteristics
+    val base_health: Int,
+    val primary_attr:String,
+    val attack_type:String,
+    val base_health_regen:String,
+    val base_mana :String,
+    val base_mana_regen: String,
+    val base_armor:String,
+    val base_attack_min:String,
+    val base_str :String,
+    val base_agi :String,
+    val base_int:String,
+    val str_gain:String,
+    val agi_gain:String,
+    val int_gain:String,
+    val attack_range:String,
+    val move_speed:String
+) {
+    override fun toString(): String {
+        return  "name=$localized_name" +
+                "\nprimary_attr=$primary_attr, attack_type=$attack_type" +
+                "\nbase_health=$base_health+$base_health_regen " +
+                "\nbase_mana=$base_mana+$base_mana_regen," +
+                "\nbase_armor=$base_armor, base_attack_min=$base_attack_min," +
+                "\nbase_str=$base_str+$str_gain" +
+                "\nbase_agi=$base_agi+$agi_gain" +
+                "\nbase_int=$base_int+$int_gain" +
+                "\nattack_range=$attack_range, move_speed=$move_speed"
+    }
+}
